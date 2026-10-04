@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="{{ asset('images/logo-smkn1cijati.png') }}">
     <link rel="stylesheet" href="{{ asset('css/daftarakun.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/daftarakun.css') }}?v={{ filemtime(public_path('css/daftarakun.css')) }}">
+    <script src="{{ asset('js/daftarakun.js') }}?v={{ filemtime(public_path('js/daftarakun.js')) }}"></script>
 </head>
-<body>
+<body>.
 
     <div class="register-wrapper">
 
