@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ asset('css/daftarakun.css') }}?v={{ filemtime(public_path('css/daftarakun.css')) }}">
     <script src="{{ asset('js/daftarakun.js') }}?v={{ filemtime(public_path('js/daftarakun.js')) }}"></script>
 </head>
-<body>.
+<body>
 
     <div class="register-wrapper">
 
