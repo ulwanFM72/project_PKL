@@ -3,7 +3,7 @@
 <head>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Pendaftaran Ekskul SMKN 1 Cijati</title>.
+    <title>Login - Pendaftaran Ekskul SMKN 1 Cijati</title>
 
     <meta property="og:title" content="Login - SMK Negeri 1 Cijati">
     <meta property="og:description" content="Sistem pendaftaran ekstrakurikuler online SMK Negeri 1 Cijati">
