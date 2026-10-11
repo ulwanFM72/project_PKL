@@ -85,4 +85,4 @@
 
     <script src="{{ asset('js/daftarakun.js') }}"></script>
 </body>
-</html>
+</html>.

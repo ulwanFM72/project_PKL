@@ -119,4 +119,4 @@
 <script src="{{ asset('js/cetak.js') }}"></script>
 
 </body>
-</html>
+</html>.
