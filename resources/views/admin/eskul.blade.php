@@ -282,4 +282,4 @@
 
 <script src="{{ asset('js/admin/eskul.js') }}"></script>
 </body>
-</html>
+</html>.
