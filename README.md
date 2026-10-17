@@ -1,47 +1,42 @@
 # Sistem Pendaftaran Ekstrakurikuler SMK Negeri 1 Cijati
 
 Aplikasi web untuk mengelola pendaftaran kegiatan ekstrakurikuler secara
-daring. Sistem ini menggantikan proses pendaftaran manual (formulir kertas
-dan rekap berkas) dengan alur yang lebih cepat, rapi, dan transparan bagi
-siswa, pembina, maupun pihak sekolah.
-
-## Latar Belakang
-
-Pendaftaran eskul secara manual rentan terhadap data ganda, berkas hilang,
-dan rekap yang memakan waktu. Aplikasi ini dibuat agar seluruh proses,
-mulai dari pemilihan eskul, pendaftaran, hingga pengelolaan anggota,
-dilakukan dalam satu sistem terpusat.
+daring. Sistem ini menggantikan pendaftaran manual (formulir kertas dan
+rekap berkas) dengan alur yang lebih cepat, rapi, dan terpusat bagi siswa,
+pembina, dan pihak sekolah.
 
 ## Fitur Utama
 
 ### Siswa
-- Registrasi dan login akun siswa
-- Melihat daftar eskul beserta deskripsi, jadwal, dan pembina
-- Mendaftar eskul secara online
-- Memantau status pendaftaran (menunggu, diterima, ditolak)
-- Melihat riwayat eskul yang diikuti
+- Pembuatan akun dan login
+- Melihat daftar eskul lengkap dengan foto, jadwal, deskripsi, dan pembina
+- Mendaftar eskul secara online (maksimal 5 eskul per siswa, tanpa
+  pendaftaran ganda pada eskul yang sama)
 
 ### Pembina
 - Melihat daftar pendaftar pada eskul yang dibina
-- Menyetujui atau menolak pendaftaran
-- Mengelola data anggota
+- Mengubah dan menghapus data siswa anggota eskulnya
 
 ### Administrator
-- Mengelola data eskul (tambah, ubah, hapus)
-- Mengelola akun siswa dan pembina
-- Mengatur periode dan kuota pendaftaran
-- Rekap data pendaftar dan ekspor laporan
+- Mengelola data eskul (nama, pembina, foto, jadwal, deskripsi)
+- Mengelola akun pembina dan siswa
+- Memantau dan menghapus data pendaftaran
+- Mengelola keanggotaan eskul
+
+### Keamanan Akses
+Hak akses dibedakan menjadi tiga level (siswa, pembina, admin). Halaman
+admin dilindungi middleware sehingga hanya dapat diakses oleh administrator.
 
 ## Teknologi yang Digunakan
 
-- Framework: Laravel
-- Bahasa pemrograman: PHP
+- Framework: Laravel 13
+- Bahasa pemrograman: PHP 8.3 atau lebih baru
 - Basis data: MySQL
-- Antarmuka: Blade Template, Bootstrap, JavaScript
+- Antarmuka: Blade Template, CSS, JavaScript
 
 ## Persyaratan Sistem
 
-- PHP 8.2 atau lebih baru
+- PHP 8.3 atau lebih baru
 - Composer
 - Node.js dan NPM
 - MySQL
@@ -49,8 +44,8 @@ dilakukan dalam satu sistem terpusat.
 ## Instalasi
 
 1. Clone repositori
-   git clone https://github.com/ulwanFM72/official_smkn1cijati.git
-   cd official_smkn1cijati
+   git clone https://github.com/ulwanFM72/<nama-repo>.git
+   cd <nama-repo>
 
 2. Pasang dependensi
    composer install
@@ -60,32 +55,37 @@ dilakukan dalam satu sistem terpusat.
    cp .env.example .env
    php artisan key:generate
 
-4. Atur koneksi basis data pada `.env`, lalu migrasi dan isi data awal
+4. Buat basis data MySQL kosong, lalu atur pada `.env`:
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=<nama_database>
+   DB_USERNAME=<username>
+   DB_PASSWORD=<password>
+
+5. Jalankan migrasi dan data awal
    php artisan migrate --seed
 
-5. Jalankan aplikasi
+6. Jalankan aplikasi
    php artisan serve
-   npm run dev
 
 Aplikasi dapat diakses melalui http://localhost:8000.
 
+Akun administrator awal dibuat oleh seeder. Segera ganti kata sandinya
+setelah login pertama.
+
 ## Alur Penggunaan
 
-1. Siswa membuat akun dan masuk ke sistem.
-2. Siswa memilih eskul dan mengirim pendaftaran.
-3. Pembina meninjau dan memberi keputusan.
-4. Siswa menerima pembaruan status pendaftaran.
-5. Admin memantau dan merekap seluruh data.
-
-## Kontribusi
-
-Silakan ajukan *issue* untuk melaporkan masalah atau usulan fitur, dan
-kirimkan *pull request* untuk perbaikan.
+1. Admin mendaftarkan pembina dan eskul beserta jadwal dan deskripsinya.
+2. Siswa membuat akun, lalu login.
+3. Siswa memilih eskul dan mendaftar.
+4. Pembina memantau pendaftar dan anggota eskulnya.
+5. Admin memantau dan mengelola seluruh data.
 
 ## Kredit
 
-Dikembangkan oleh ulwan fauzul muqtaf
+Dikembangkan oleh Ulwan Fauzul Muqtaf.
 
 ## Lisensi
 
-Cantumkan lisensi sesuai ketentuan sekolah dan repositori asal.
+Cantumkan lisensi sesuai ketentuan sekolah.
