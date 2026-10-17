@@ -84,8 +84,7 @@ kirimkan *pull request* untuk perbaikan.
 
 ## Kredit
 
-Dikembangkan oleh ulwanFM72 dengan basis kode awal dari repositori
-juitamhlia/web-sekolah-juita-mahalia.
+Dikembangkan oleh ulwan fauzul muqtaf
 
 ## Lisensi
 
