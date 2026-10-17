@@ -1,61 +1,92 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Sistem Pendaftaran Ekstrakurikuler SMK Negeri 1 Cijati
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Aplikasi web untuk mengelola pendaftaran kegiatan ekstrakurikuler secara
+daring. Sistem ini menggantikan proses pendaftaran manual (formulir kertas
+dan rekap berkas) dengan alur yang lebih cepat, rapi, dan transparan bagi
+siswa, pembina, maupun pihak sekolah.
 
-## About Laravel
+## Latar Belakang
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Pendaftaran eskul secara manual rentan terhadap data ganda, berkas hilang,
+dan rekap yang memakan waktu. Aplikasi ini dibuat agar seluruh proses,
+mulai dari pemilihan eskul, pendaftaran, hingga pengelolaan anggota,
+dilakukan dalam satu sistem terpusat.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Fitur Utama
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Siswa
+- Registrasi dan login akun siswa
+- Melihat daftar eskul beserta deskripsi, jadwal, dan pembina
+- Mendaftar eskul secara online
+- Memantau status pendaftaran (menunggu, diterima, ditolak)
+- Melihat riwayat eskul yang diikuti
 
-## Learning Laravel
+### Pembina
+- Melihat daftar pendaftar pada eskul yang dibina
+- Menyetujui atau menolak pendaftaran
+- Mengelola data anggota
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Administrator
+- Mengelola data eskul (tambah, ubah, hapus)
+- Mengelola akun siswa dan pembina
+- Mengatur periode dan kuota pendaftaran
+- Rekap data pendaftar dan ekspor laporan
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Teknologi yang Digunakan
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+- Framework: Laravel
+- Bahasa pemrograman: PHP
+- Basis data: MySQL
+- Antarmuka: Blade Template, Bootstrap, JavaScript
 
-## Agentic Development
+## Persyaratan Sistem
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+- PHP 8.2 atau lebih baru
+- Composer
+- Node.js dan NPM
+- MySQL
 
-```bash
-composer require laravel/boost --dev
+## Instalasi
 
-php artisan boost:install
-```
+1. Clone repositori
+   git clone https://github.com/ulwanFM72/official_smkn1cijati.git
+   cd official_smkn1cijati
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+2. Pasang dependensi
+   composer install
+   npm install
 
-## Contributing
+3. Siapkan berkas lingkungan
+   cp .env.example .env
+   php artisan key:generate
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+4. Atur koneksi basis data pada `.env`, lalu migrasi dan isi data awal
+   php artisan migrate --seed
 
-## Code of Conduct
+5. Jalankan aplikasi
+   php artisan serve
+   npm run dev
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Aplikasi dapat diakses melalui http://localhost:8000.
 
-## Security Vulnerabilities
+## Alur Penggunaan
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+1. Siswa membuat akun dan masuk ke sistem.
+2. Siswa memilih eskul dan mengirim pendaftaran.
+3. Pembina meninjau dan memberi keputusan.
+4. Siswa menerima pembaruan status pendaftaran.
+5. Admin memantau dan merekap seluruh data.
 
-## License
+## Kontribusi
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# finnal-project-pkl
-# finnal-project-pkl
-# finnal-project-pkl
+Silakan ajukan *issue* untuk melaporkan masalah atau usulan fitur, dan
+kirimkan *pull request* untuk perbaikan.
+
+## Kredit
+
+Dikembangkan oleh ulwanFM72 dengan basis kode awal dari repositori
+juitamhlia/web-sekolah-juita-mahalia.
+
+## Lisensi
+
+Cantumkan lisensi sesuai ketentuan sekolah dan repositori asal.
