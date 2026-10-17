@@ -148,4 +148,4 @@
 <script src="{{ asset('js/admin/pembina.js') }}"></script>
 
 </body>
-</html>
+</html>.
